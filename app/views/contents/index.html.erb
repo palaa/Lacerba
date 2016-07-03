@@ -5,7 +5,7 @@
 <div class ="row">
   <% @contents.each do |content| %>
     <div class="col s4">
-      <div class="card">
+      <div class="card z-depth-5">
         <div class="card-image waves-effect waves-block waves-light">
           <%= image_tag content.cover.url, class: "activator" %>
         </div>
@@ -34,3 +34,5 @@
     </div>
   <% end %>
 </div>
+
+
