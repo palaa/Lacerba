@@ -1,30 +1,21 @@
-<p id="notice"><%= notice %></p>
 
-<!-- <h1>Listing Contents</h1> -->
-
-<div class ="row">
+<div class="row">
   <% @contents.each do |content| %>
-    <div class="col s4">
+    <div class="col s12 m6 l4">
       <div class="card z-depth-5">
         <div class="card-image waves-effect waves-block waves-light">
           <%= image_tag content.cover.url, class: "activator" %>
         </div>
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4"><%= content.titolo %><i class="material-icons right">more_vert</i></span>
+          <div class="card-title activator grey-text text-darken-4">
+            <h5><%= content.titolo %></h5>
+            <i class="material-icons right">more_vert</i></div>
           <div>
             <span>Venduto da <%= content.user.name %></span>
             <span class="right"><%= number_to_currency(content.price) %></span>
           </div>
-          </br>
-          <div class="center"><%= link_to 'Scopri di più', content, class: "btn"%></div>
-          <% if content.user == current_user %>
-          </br>
-          <div class="center">
-          <p><%= link_to 'Edit', edit_content_path(content) %>
-          <%= link_to 'Destroy', content, method: :delete, data: { confirm: 'Are you sure?' } %>
-          </p>
-          </div>
-          <% end %>
+          <br>
+          <div class="center"><%= link_to 'Scopri di più', content, class: "btn orange" %></div>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4"><%= content.titolo %><i class="material-icons right">close</i></span>
@@ -35,4 +26,9 @@
   <% end %>
 </div>
 
+<br>
+<div class="center">
 
+<%= will_paginate @contents, class: "flickr_pagination" %>
+
+</div>
