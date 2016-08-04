@@ -14,6 +14,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "paperclip", "~> 5.0.0.beta1"
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-materialize'
+gem 'friendly_id', '~> 5.1.0'
+
+gem 'dotenv-rails', :groups => [:development, :test]
 
 
 gem 'materialize-sass'

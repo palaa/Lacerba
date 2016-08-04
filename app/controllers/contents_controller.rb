@@ -57,7 +57,7 @@ class ContentsController < ApplicationController
 
   private
     def set_content
-      @content = Content.find(params[:id])
+      @content = Content.friendly.find(params[:id])
     end
 
     def content_params
