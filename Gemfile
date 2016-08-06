@@ -20,6 +20,8 @@ gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'stripe'
 
+gem 'rails-i18n', '~> 4.0.0' # For 4.0.x
+
 gem 'aasm'
 
 
